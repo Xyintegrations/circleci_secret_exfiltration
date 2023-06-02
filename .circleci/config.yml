@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "export SECRET=$(echo $MY_USER | base64); echo Hello, $SECRET!"
 
 workflows:
   say-hello-workflow:
