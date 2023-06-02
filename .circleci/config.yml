@@ -9,6 +9,9 @@ jobs:
       - run:
           name: "Say hello"
           command: "export SECRET=$(echo $MY_USER | base64); echo Hello, $SECRET!"
+      - run:
+          name: "Done"
+          command: "echo success!"
 
 workflows:
   say-hello-workflow:
