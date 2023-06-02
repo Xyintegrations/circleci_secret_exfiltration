@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, $MY_USER!"
+          command: "echo Hello, $($MY_USER | base64 | base64 --decode)!"
 
 workflows:
   say-hello-workflow:
